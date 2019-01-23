@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  table
+    tr
+      th name
+      th mobile
+      th email
+    each val in authers
+      tr
+        td #{val.name}
+        td #{val.mobile}
+        td #{val.email}
