@@ -21,12 +21,35 @@ router.get("/fatma",(req,res,next)=>{
     for(i of records){
       data.push({name:i.name,mobile:i.mobile,email:i.email})
     }
-    let books = [{},{},{}]
-    let resident = [{},{},{}]
+    books.find({},function(err,records){
+      let books = [{},{},{}]
+      for(i of records){
+        data.push(i)
+      }
+      
+     resident.find({},function(err,records){
+        let resident = [{},{},{}]
+        for(i of records){
+          resident.push(i)
+        }
+    
+    
     res.render('index', { title: 'fatma',authers:data,books:books
   ,resident:resident});
   })
 })
+
+
+router.get("/fatma",(req,res,next)=>{
+  books.find({},function(err,records){
+    let data = []
+    for(i of records){
+      data.push(i)
+    }
+    let books = [{},{},{}]
+    let resident = [{},{},{}]
+    res.render('index', { title: 'fatma',authers:data,books:books
+  ,resident:resident});
 
 
 module.exports = router;
