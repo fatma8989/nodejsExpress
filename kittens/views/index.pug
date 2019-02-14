@@ -1,5 +1,31 @@
 extends layout
 
 block content
+  style.
+    h1,p {
+      text-align:center
+    }
+    .m {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;  
+
+    }
+
+
+    img {
+        position: relative;
+        float: left;
+        width:  100%;
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat:   no-repeat;
+        background-size:     cover;
+    }
+    
+
   h1= title
+  
   p Welcome to #{title}
+  .m
+    for val in urls 
+     img(src= val)
