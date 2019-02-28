@@ -1,32 +1,105 @@
 extends layout
 
-block content
-    h1= title
-    dropdown-menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    padding: 5px;
-    background-color: #cae8ca;
-    border: 2px solid #4CAF50;
-    }
-  p Welcome to #{title}
-  ul.nav.nav-tabs
-  li.nav-item
-    a.nav-link.active(href='#') Active
-  li.nav-item
-    a.nav-link(href='#') price 
-  li.nav-item
-    a.nav-link(href='#') info
-  
-  
-  a.irc_mutl.i3597(tabindex='0', style='top: 20px;', href='/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjC44X_sNXgAhVEx4UKHXeUA-4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F307942%2Fbuy_checkout_ecommerce_full_mini_shopping_cart_icon&psig=AOvVaw3OhFbSXfjPVIYW1lbMzcZN&ust=1551132498727342', target='_blank', rel='noopener', jsaction='mousedown:irc.rl;focus:irc.rl', data-ved='2ahUKEwjC44X_sNXgAhVEx4UKHXeUA-4QjRx6BAgBEAU', data-ctbtn='2', data-cthref='/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjC44X_sNXgAhVEx4UKHXeUA-4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F307942%2Fbuy_checkout_ecommerce_full_mini_shopping_cart_icon&psig=AOvVaw3OhFbSXfjPVIYW1lbMzcZN&ust=1551132498727342', data-noload='')
-  img.irc_mut(width='353', height='353', style='margin-top: 0px;', onload="typeof google==='object'&&google.aft&&google.aft(this)", alt='نتيجة بحث الصور عن ‪shopping management icon in pug‬‏', src='data:image/png;base64,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', data-iml='1551046101969')
 
-  .dropdown
-  button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(aria-expanded='false', aria-haspopup='true', type='button', data-toggle='dropdown')
-    | CARTS
-  .dropdown-menu(aria-labelledby='dropdownMenuButton')
-    a.dropdown-item(href='#') Action
-    a.dropdown-item(href='#') Another action
-    a.dropdown-item(href='#') Something else here
+
+block content
+  h1= title
+  p Welcome to #{title}
+    
+  link#bootstrap-css(href='//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css', rel='stylesheet')
+  script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js')
+  script(src='//code.jquery.com/jquery-1.11.1.min.js')
+  // ---- Include the above in your HEAD tag --------
+    #tourpackages-carousel.container
+  .row
+    .col-xs-18.col-sm-6.col-md-3
+      .thumbnail
+        img(alt='', src='https://www.google.com.kw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjxwaayv9zgAhWi4IUKHQcYAVUQjRx6BAgBEAU&url=http%3A%2F%2Fscreen4you.ir%2Fproduct%2F%25D9%2585%25D8%25AD%25D8%25A7%25D9%2581%25D8%25B8-%25D8%25B5%25D9%2581%25D8%25AD%25D9%2587-%25D9%2586%25D9%2585%25D8%25A7%25DB%258C%25D8%25B4-iphone-6%2F&psig=AOvVaw0u0ZYjjOOIHH4E7u_LELcH&ust=1551376814449525')
+        .caption
+          h4 Thumbnail label
+          p
+            iphone
+          p
+            a.btn.btn-info.btn-xs(role='button', href='#') Button
+            a.btn.btn-default.btn-xs(role='button', href='#') Button
+    .col-xs-18.col-sm-6.col-md-3
+      .thumbnail
+        img(alt='', src='http://schema.org/SearchResultsPage')
+        .caption
+          h4 Thumbnail label
+          p
+            andriod
+          p
+            a.btn.btn-info.btn-xs(role='button', href='#') Button
+            a.btn.btn-default.btn-xs(role='button', href='#') Button
+    .col-xs-18.col-sm-6.col-md-3
+      .thumbnail
+        img(alt='', src='https://www.google.com.sa/search?q=images&tbm=isch&source=iu&ictx=1&fir=A6JJqffgz3xzlM%253A%252CpFs_4Fcq5AgpmM%252C_&usg=AI4_-kSe7kutL7fo50LZBJwVxdtPCks5eQ&sa=X&ved=2ahUKEwiF95qxwdzgAhUhgM4BHeJJDc8Q9QEwAXoECAUQBA#imgrc=A6JJqffgz3xzlM:')
+        .caption
+          h4 Thumbnail label
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
+          p
+            a.btn.btn-info.btn-xs(role='button', href='#') Button
+            a.btn.btn-default.btn-xs(role='button', href='#') Button
+    .col-xs-18.col-sm-6.col-md-3
+      .thumbnail
+        img(alt='', src='http://placehold.it/500x300')
+        .caption
+          h4 Thumbnail label
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
+          p
+            a.btn.btn-info.btn-xs(role='button', href='#') Button
+            a.btn.btn-default.btn-xs(role='button', href='#') Button
+    // End row
+    // End container
+
+    .row
+        .col-xs-18.col-sm-6.col-md-3
+        .thumbnail
+            img(alt='', src='https://www.google.com.kw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjxwaayv9zgAhWi4IUKHQcYAVUQjRx6BAgBEAU&url=http%3A%2F%2Fscreen4you.ir%2Fproduct%2F%25D9%2585%25D8%25AD%25D8%25A7%25D9%2581%25D8%25B8-%25D8%25B5%25D9%2581%25D8%25AD%25D9%2587-%25D9%2586%25D9%2585%25D8%25A7%25DB%258C%25D8%25B4-iphone-6%2F&psig=AOvVaw0u0ZYjjOOIHH4E7u_LELcH&ust=1551376814449525')
+            .caption
+            h4 Thumbnail label
+            p
+                iphone
+            p
+                a.btn.btn-info.btn-xs(role='button', href='#') Button
+                a.btn.btn-default.btn-xs(role='button', href='#') Button
+        .col-xs-18.col-sm-6.col-md-3
+        .thumbnail
+            img(alt='', src='http://schema.org/SearchResultsPage')
+            .caption
+            h4 Thumbnail label
+            p
+                andriod
+            p
+                a.btn.btn-info.btn-xs(role='button', href='#') Button
+                a.btn.btn-default.btn-xs(role='button', href='#') Button
+        .col-xs-18.col-sm-6.col-md-3
+        .thumbnail
+            img(alt='', src='https://steamcdn-a.akamaihd.net/steam/apps/65540/ss_21a701215d357735475038949960349f352b5a2a.1920x1080.jpg?t=1533039524')
+            .caption
+            h4 Thumbnail label
+            p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
+            p
+                a.btn.btn-info.btn-xs(role='button', href='#') Button
+                a.btn.btn-default.btn-xs(role='button', href='#') Button
+        .col-xs-18.col-sm-6.col-md-3
+        .thumbnail
+            img(alt='', src='http://placehold.it/500x300')
+            .caption
+            h4 Thumbnail label
+            p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
+            p
+                a.btn.btn-info.btn-xs(role='button', href='#') Button
+                a.btn.btn-default.btn-xs(role='button', href='#') Button
+    // End row
+    // End container
+
+        
+        
+ 
+  

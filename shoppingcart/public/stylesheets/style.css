@@ -1,4 +1,18 @@
-nav {
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+.thumbnail{
 
+max-height: 150px;
+max-width: 150px;
+max-inline-size: 50%;
+}
+.img {
+  grid-template-columns: 20% 20% 20% 20% 20%;  
 
 }
