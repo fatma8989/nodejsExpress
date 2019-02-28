@@ -5,12 +5,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-    
-  link#bootstrap-css(href='//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css', rel='stylesheet')
-  script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js')
-  script(src='//code.jquery.com/jquery-1.11.1.min.js')
-  // ---- Include the above in your HEAD tag --------
-    #tourpackages-carousel.container
+  h1= data
+
   .row
     .col-xs-18.col-sm-6.col-md-3
       .thumbnail
