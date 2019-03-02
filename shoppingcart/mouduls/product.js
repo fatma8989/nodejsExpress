@@ -14,3 +14,5 @@ currency:{type: String},
 description: {type: String}
 })
 module.exports= mongoose.model('product', schema)
+
+

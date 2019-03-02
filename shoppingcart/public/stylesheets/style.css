@@ -1,18 +1,51 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: lightblue;
   }
   
-  a {
-    color: #00B7FF;
+  .card{
+    color: rgb(132, 0, 255);
   }
-.thumbnail{
 
-max-height: 150px;
-max-width: 150px;
-max-inline-size: 50%;
-}
-.img {
-  grid-template-columns: 20% 20% 20% 20% 20%;  
+  .h1{
+    text-align :center
+    color green
+  }
+ 
+  .img {
 
-}
+    position: relative;
+    float: left;
+    width:  100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:  cover;
+  
+  }
+
+  .label{
+
+      display: grid;
+  
+      grid-template-columns: 20% 20% 20% 20% 20%;  
+  
+      }
+  .price {
+
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+
+  }   
+  .label {
+    color: white;
+    padding: 8px;
+  }
+  
+
+  

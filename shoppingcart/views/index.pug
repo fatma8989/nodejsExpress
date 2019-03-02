@@ -1,101 +1,44 @@
 extends layout
 
-
+    
 
 block content
   h1= title
   p Welcome to #{title}
-  h1= data
-
-  .row
-    .col-xs-18.col-sm-6.col-md-3
-      .thumbnail
-        img(alt='', src='https://www.google.com.kw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjxwaayv9zgAhWi4IUKHQcYAVUQjRx6BAgBEAU&url=http%3A%2F%2Fscreen4you.ir%2Fproduct%2F%25D9%2585%25D8%25AD%25D8%25A7%25D9%2581%25D8%25B8-%25D8%25B5%25D9%2581%25D8%25AD%25D9%2587-%25D9%2586%25D9%2585%25D8%25A7%25DB%258C%25D8%25B4-iphone-6%2F&psig=AOvVaw0u0ZYjjOOIHH4E7u_LELcH&ust=1551376814449525')
-        .caption
-          h4 Thumbnail label
-          p
-            iphone
-          p
-            a.btn.btn-info.btn-xs(role='button', href='#') Button
-            a.btn.btn-default.btn-xs(role='button', href='#') Button
-    .col-xs-18.col-sm-6.col-md-3
-      .thumbnail
-        img(alt='', src='http://schema.org/SearchResultsPage')
-        .caption
-          h4 Thumbnail label
-          p
-            andriod
-          p
-            a.btn.btn-info.btn-xs(role='button', href='#') Button
-            a.btn.btn-default.btn-xs(role='button', href='#') Button
-    .col-xs-18.col-sm-6.col-md-3
-      .thumbnail
-        img(alt='', src='https://www.google.com.sa/search?q=images&tbm=isch&source=iu&ictx=1&fir=A6JJqffgz3xzlM%253A%252CpFs_4Fcq5AgpmM%252C_&usg=AI4_-kSe7kutL7fo50LZBJwVxdtPCks5eQ&sa=X&ved=2ahUKEwiF95qxwdzgAhUhgM4BHeJJDc8Q9QEwAXoECAUQBA#imgrc=A6JJqffgz3xzlM:')
-        .caption
-          h4 Thumbnail label
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
-          p
-            a.btn.btn-info.btn-xs(role='button', href='#') Button
-            a.btn.btn-default.btn-xs(role='button', href='#') Button
-    .col-xs-18.col-sm-6.col-md-3
-      .thumbnail
-        img(alt='', src='http://placehold.it/500x300')
-        .caption
-          h4 Thumbnail label
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
-          p
-            a.btn.btn-info.btn-xs(role='button', href='#') Button
-            a.btn.btn-default.btn-xs(role='button', href='#') Button
-    // End row
-    // End container
-
-    .row
-        .col-xs-18.col-sm-6.col-md-3
-        .thumbnail
-            img(alt='', src='https://www.google.com.kw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjxwaayv9zgAhWi4IUKHQcYAVUQjRx6BAgBEAU&url=http%3A%2F%2Fscreen4you.ir%2Fproduct%2F%25D9%2585%25D8%25AD%25D8%25A7%25D9%2581%25D8%25B8-%25D8%25B5%25D9%2581%25D8%25AD%25D9%2587-%25D9%2586%25D9%2585%25D8%25A7%25DB%258C%25D8%25B4-iphone-6%2F&psig=AOvVaw0u0ZYjjOOIHH4E7u_LELcH&ust=1551376814449525')
-            .caption
-            h4 Thumbnail label
-            p
-                iphone
-            p
-                a.btn.btn-info.btn-xs(role='button', href='#') Button
-                a.btn.btn-default.btn-xs(role='button', href='#') Button
-        .col-xs-18.col-sm-6.col-md-3
-        .thumbnail
-            img(alt='', src='http://schema.org/SearchResultsPage')
-            .caption
-            h4 Thumbnail label
-            p
-                andriod
-            p
-                a.btn.btn-info.btn-xs(role='button', href='#') Button
-                a.btn.btn-default.btn-xs(role='button', href='#') Button
-        .col-xs-18.col-sm-6.col-md-3
-        .thumbnail
-            img(alt='', src='https://steamcdn-a.akamaihd.net/steam/apps/65540/ss_21a701215d357735475038949960349f352b5a2a.1920x1080.jpg?t=1533039524')
-            .caption
-            h4 Thumbnail label
-            p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
-            p
-                a.btn.btn-info.btn-xs(role='button', href='#') Button
-                a.btn.btn-default.btn-xs(role='button', href='#') Button
-        .col-xs-18.col-sm-6.col-md-3
-        .thumbnail
-            img(alt='', src='http://placehold.it/500x300')
-            .caption
-            h4 Thumbnail label
-            p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit
-            p
-                a.btn.btn-info.btn-xs(role='button', href='#') Button
-                a.btn.btn-default.btn-xs(role='button', href='#') Button
-    // End row
-    // End container
-
-        
-        
- 
   
+  .imagePath
+  .label
+  .price
+  .descreption
+  .currency
+  .description
+
+  for val in data 
+ 
+    .card
+    img(src=val)
+    h1 #{val.imagePath}
+    p #{val.price}
+    p #{val.descreption}
+    p #{val.label}
+    p #{val.currency}
+    
+        button Add to Cart 
+
+
+
+    
+    
+    //-  .row
+    //-         .col-xs-18.col-sm-6.col-md-3
+    //-         .imagePath
+    //-             img(src = val)
+    //-         .label
+    //-             h4 .price
+    //-             p
+    //-                 .description
+    //-             p
+    //-                     a.btn.btn-info.btn-xs(role='button', href='#') Button
+    //-                     a.btn.btn-default.btn-xs(role='button', href='#') Button
+    //-             .col-xs-18.col-sm-6.col-md-3
+                
