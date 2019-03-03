@@ -1,44 +1,21 @@
 extends layout
 
-    
-
 block content
-  h1= title
+  .h1
+    h1= title
   p Welcome to #{title}
-  
-  .imagePath
-  .label
-  .price
-  .descreption
-  .currency
-  .description
-
-  for val in data 
- 
-    .card
-    img(src=val.imagePath)
-    //- h1 #{val.imagePath}
-    p #{val.price}
-    p #{val.descreption}
-    p #{val.label}
-    p #{val.currency}
-    
+  .grid
+    for val in data 
+      .card
+        img(src=val.imagePath)
+        p #{val.price}
+        p #{val.descreption}
+        p #{val.label}
+        p #{val.currency}
         button Add to Cart 
 
 
 
     
     
-    //-  .row
-    //-         .col-xs-18.col-sm-6.col-md-3
-    //-         .imagePath
-    //-             img(src = val)
-    //-         .label
-    //-             h4 .price
-    //-             p
-    //-                 .description
-    //-             p
-    //-                     a.btn.btn-info.btn-xs(role='button', href='#') Button
-    //-                     a.btn.btn-default.btn-xs(role='button', href='#') Button
-    //-             .col-xs-18.col-sm-6.col-md-3
                 
