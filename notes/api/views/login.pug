@@ -2,47 +2,20 @@ extends layout
 block content
 
 
-    each key, index in buttons
-      
-        
-        //- li.nav-item
-        //-         a.nav-link(href='#') 
-        //-              h1= key.url
-        button.btn.btn-sm(type="submit",href=key.url) a
-
-
-        
-        //- h1= key.url
-        //- h1= index
-        //- button.btn.btn-sm(type="submit") mynote
-
-
-
-
-
+  
 
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    
         a.navbar-brand(href='#') #{title}
-             
-
-            
-           
-                
-        
-        
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
+             each key, index in buttons
+              
                 li.nav-item.active
-                    a.nav-link(href='#')
-                        | Home 
-                        span.sr-only (current)
-                li.nav-item
-                    a.nav-link(href='#') Link
-                li.nav-item
-                    a.nav-link.disabled(href='#') Disabled
+                    a.nav-link(href=key.url)
+                        |  #{key.title}
+                      
             
 
 
