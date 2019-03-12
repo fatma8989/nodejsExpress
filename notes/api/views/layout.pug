@@ -19,45 +19,48 @@ html
     script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js')
     // MDB core JavaScript
     script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js')
-
-  body
+    link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', rel='stylesheet')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+body
+    
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      a.navbar-brand(href='#') #{title}
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-      #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.mr-auto
-              each key, index in buttons
-                  li.nav-item.active
-                      a.nav-link(href=key.url)
-                          |  #{key.title}
+        a.navbar-brand(href='#') #{title}
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+                each key, index in buttons
+                    li.nav-item.active
+                        a.nav-link(href=key.url)
+                            |  #{key.title}
     block content
 
-    // Footer
+
     footer.page-footer.font-small.cyan.darken-3
-      // Footer Elements
-      .container
-        // Grid row
+        
+    .container
+            
         .row
-          // Grid column
-          .col-md-12.py-5
+            
+        .col-md-12.py-5
             .mb-5.flex-center
-              // Facebook
-              a.fb-ic
-                i.fab.fa-facebook-f.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-              // Twitter
-              a.tw-ic
-                i.fab.fa-twitter.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-              // Google +
-              a.gplus-ic
-                i.fab.fa-google-plus-g.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-              // Linkedin
-              a.li-ic
-                i.fab.fa-linkedin-in.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-              // Instagram
-              a.ins-ic
-                i.fab.fa-instagram.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-              // Pinterest
-              a.pin-ic
-                i.fab.fa-pinterest.fa-lg.white-text.fa-2x  
-      | © 2018 Copyright:
+                
+                a.fb-ic
+                    i.fab.fa-facebook-f.fa-lg.white-text.mr-md-5.mr-3.fa-2x 
+
+                a.tw-ic
+                    i.fab.fa-twitter.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
+                
+                // Linkedin
+                a.li-ic
+                    i.fab.fa-linkedin-in.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
+                // Instagram
+                a.ins-ic
+                    i.fab.fa-instagram.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
+                
+
+                                                | © 2018 Copyright
+
+
+                                            

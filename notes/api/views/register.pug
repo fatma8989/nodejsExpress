@@ -1,5 +1,43 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+ 
+
+
+  .container.register-form
+    .form
+      p welcome 
+      .form-content
+        .row
+          .col-md-6
+            .form-group
+              input.form-control(type='text', placeholder='email *', value='')
+          .col-md-6
+            .form-group
+              input.form-control(type='text', placeholder='Your Password *', value='')
+            .form-group
+              input.form-control(type='text', placeholder='Confirm Password *', value='')
+        button.btnSubmit(type='button') Submit
+
+
+
+
+//- form
+  fieldset(disabled='')
+    .form-group
+      label(for='disabledTextInput') Disabled input
+      input#disabledTextInput.form-control(type='text', placeholder='Disabled input')
+    .form-group
+      label(for='disabledSelect') Disabled select menu
+      select#disabledSelect.form-control
+        option Disabled select
+    .form-check
+      input#disabledFieldsetCheck.form-check-input(disabled='', type='checkbox')
+      label.form-check-label(for='disabledFieldsetCheck')
+        | Can't check this
+    button.btn.btn-primary(type='submit') Submit
+
+
+
+
+        
