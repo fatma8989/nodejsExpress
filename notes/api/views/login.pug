@@ -8,8 +8,14 @@ block content
     //-         a.nav-link(href='#') 
     //-              h1= key.url
     
-    
-
+        
+    form(action="mynotes/", method="post")
+        div.form-group(style="width:30%;")
+            input.form-control(type="text", name="user", placeholder="username")
+        div.form-group(style='width:30%;')
+            input.form-control(type="password", name="pass",placeholder="password")   
+        button.btn.btn-primary(type="submit") submit
+            
 
     
     //- h1= key.url
@@ -21,30 +27,30 @@ block content
 
 
 
-    .login-reg-panel
-    .login-info-box
-        h2 Have an account?
-        p Lorem ipsum dolor sit amet
-        label#label-register(for='log-reg-show') Login
-        input#log-reg-show(type='radio', name='active-log-panel', checked='checked')
-    .register-info-box
-        h2 Don&apos;t have an account?
-        p Lorem ipsum dolor sit amet
-        label#label-login(for='log-login-show') Register
-        input#log-login-show(type='radio', name='active-log-panel')
-    .white-panel
-        .login-show
-        h2 LOGIN
-        input(type='text', placeholder='Email')
-        input(type='password', placeholder='Password')
-        input(type='button', value='Login')
-        a(href='') Forgot password?
-        .register-show
-        h2 REGISTER
-        input(type='text', placeholder='Email')
-        input(type='password', placeholder='Password')
-        input(type='password', placeholder='Confirm Password')
-        input(type='button', value='Register')
+    //- .login-reg-panel
+    //- .login-info-box
+    //-     h2 Have an account?
+    //-     p Lorem ipsum dolor sit amet
+    //-     label#label-register(for='log-reg-show') Login
+    //-     input#log-reg-show(type='radio', name='active-log-panel', checked='checked')
+    //- .register-info-box
+    //-     h2 Don&apos;t have an account?
+    //-     p Lorem ipsum dolor sit amet
+    //-     label#label-login(for='log-login-show') Register
+    //-     input#log-login-show(type='radio', name='active-log-panel')
+    //- .white-panel
+    //-     .login-show
+    //-     h2 LOGIN
+    //-     input(type='text', placeholder='Email')
+    //-     input(type='password', placeholder='Password')
+    //-     input(type='button', value='Login')
+    //-     a(href='') Forgot password?
+    //-     .register-show
+    //-     h2 REGISTER
+    //-     input(type='text', placeholder='Email')
+    //-     input(type='password', placeholder='Password')
+    //-     input(type='password', placeholder='Confirm Password')
+    //-     input(type='button', value='Register')
                             
 
 

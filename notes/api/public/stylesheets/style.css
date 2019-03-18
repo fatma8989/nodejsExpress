@@ -1,4 +1,4 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -7,16 +7,6 @@ a {
   color: #00B7FF;
 }
 
-.footer-copyright.text-center.py-3 {
-
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:60px;   /* Height of the footer */
-    background:#6cf;
- 
-
-}
 p {
   font-size: x-large;
   font-weight: bold;
@@ -49,4 +39,4 @@ p {
   cursor: pointer
   
 }
-
+ */
