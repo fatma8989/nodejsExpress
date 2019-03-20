@@ -5,14 +5,14 @@ block content
 
 
 
-  form.form-inline
-    .form-group.mb-2
-      label.sr-only(for='staticEmail2') Email
-      input#staticEmail2.form-control-plaintext(type='text', placeholder='email')
-    .form-group.mx-sm-3.mb-2
-      label.sr-only(for='inputPassword2') Password
-      input#inputPassword2.form-control(type='password', placeholder='Password')
-    button.btn.btn-primary.mb-2(type='submit') Confirm identity
+  form(action="/register/", method="post")
+    div.form-group(style="width:30%;")
+      input#staticEmail2.form-control(type='text', name='user', placeholder='user')
+      input#staticEmail2.form-control(type='text', name='email', placeholder='email')
+    div.form-group(style="width:30%;")
+      input#inputPassword2.form-control(type='password' , name='pass', placeholder='Password')
+      input#inputPassword2.form-control(type='password', name='confirm' placeholder='confirm password')
+    button.btn.btn-primary(type='submit') submit 
 
   //- .container.register-form
   //-   .form
