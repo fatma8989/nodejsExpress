@@ -4,20 +4,30 @@ block content
  
 
 
-  .container.register-form
-    .form
-      p welcome 
-      .form-content
-        .row
-          .col-md-6
-            .form-group
-              input.form-control(type='text', placeholder='email *', value='')
-          .col-md-6
-            .form-group
-              input.form-control(type='text', placeholder='Your Password *', value='')
-            .form-group
-              input.form-control(type='text', placeholder='Confirm Password *', value='')
-        button.btnSubmit(type='button') Submit
+
+  form.form-inline
+    .form-group.mb-2
+      label.sr-only(for='staticEmail2') Email
+      input#staticEmail2.form-control-plaintext(type='text', placeholder='email')
+    .form-group.mx-sm-3.mb-2
+      label.sr-only(for='inputPassword2') Password
+      input#inputPassword2.form-control(type='password', placeholder='Password')
+    button.btn.btn-primary.mb-2(type='submit') Confirm identity
+
+  //- .container.register-form
+  //-   .form
+  //-     p welcome 
+  //-     .form-content
+  //-       .row
+  //-         .col-md-6
+  //-           .form-group
+  //-             input.form-control(type='text', placeholder='email *', value='')
+  //-         .col-md-6
+  //-           .form-group
+  //-             input.form-control(type='text', placeholder='Your Password *', value='')
+  //-           .form-group
+  //-             input.form-control(type='text', placeholder='Confirm Password *', value='')
+  //-       button.btnSubmit(type='button') Submit
 
 
 
