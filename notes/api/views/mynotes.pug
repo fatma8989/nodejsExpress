@@ -1,7 +1,27 @@
 extends layout
 
 block content
-  h1= title
+  h1=JSON.stringify(user) 
+
+  //- form(action="" , method="post",style="margin: 3% 3% 3% 3%;")
+  div(style="margin: 3% 3% 3% 3%;")
+    div
+      input#title.form-control(type="text", name="title", placeholder="title")
+    div
+      textarea#text.form-control(type="text", name="body", placeholder="body")
+    div(style="float: right;")
+      button#submit.btn.btn-primary(type="submit") send 
+
+  script.
+    $("#submit").click(function(){
+      let note = {
+        title:$("#title").val(),
+        body:$("#text").val(),
+        user:"#{user}.user"
+      }
+
+      console.log(note)
+    })
 
 
   table.table.table-bordered
@@ -26,4 +46,4 @@ block content
         th(scope='row') 
         td 
         td 
-        
+    

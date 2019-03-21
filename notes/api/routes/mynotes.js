@@ -3,17 +3,21 @@ var router = express.Router();
 var request = require('request')
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('mynotes', { title: 'mynotes',buttons:[{title:"register",url:"/register/"}, ]  });
-});
+  res.send("Error 404")
+  // console.log(req.body)
+  // res.render('mynotes', { title: 'mynotes',buttons:[{title:"register",url:"/register/"}, ]  });
+}); 
 
 router.post('/',function(req,res,next){
   
  
-  request.post('http://www.localhost:3001/api/Users/login', {form:{username:req.body.user,password:req.body.pass}},(err,req,body)=>{
+  request.post('http://www.localhost:3001/api/Users/login', {form:{username:req.body.user,password:req.body.pass}},(err,reqq,body)=>{
   let result = JSON.parse(body)
-  let keys = Object.keys(result)
-  if (keys.indexOf("error")== -1){
-    res.redirect("/mynotes")
+  result["user"]= req.body.user
+  
+  if (reqq.statusCode == 200){
+    res.render('mynotes', { user:result,title: 'mynotes',buttons:[]  });
+    // res.redirect("/mynotes")
 
   }else {
     res.redirect("/")
