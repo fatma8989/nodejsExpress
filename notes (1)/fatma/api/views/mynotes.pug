@@ -1,0 +1,66 @@
+extends layout
+
+block content
+
+  //- form(action="" , method="post",style="margin: 3% 3% 3% 3%;")
+  div(style="margin: 3% 3% 3% 3%;")
+    div
+      input#title.form-control(type="text", name="title", placeholder="title")
+    div
+      textarea#text.form-control(type="text", name="body", placeholder="body")
+    div(style="float: right;")
+      button#submit.btn.btn-primary(type="submit") send 
+
+
+function f1(x,y,fn){
+  fn(x+y)
+}
+f(1,1,function(result){
+  console.log(result)
+})
+
+  script.
+    $("#submit").click(function(){
+      let note = {
+        title:$("#title").val(),
+        body:$("#text").val(),
+        user:"#{user.user}"
+      }
+      let url = "http://localhost:3001/API/notes"
+      let method = "post"
+      //- $.ajax({url:url,type: method,data:note},success:(data)=>{console.log("YAY!")},fail:(data)=>{console.log(data)})
+      $.ajax({url:url, method:method,data:note}).done((data)=>{
+        // UPDATE TABLE !!
+      })
+    })
+      let method = "get"
+      let url = "http://localhost:3001/API/notes"
+      $.ajax({url:url, method:method}).done((data)=>{
+        console.log(data)
+          //request call "get"!!
+        }) 
+
+
+  table.table.table-bordered
+    thead
+      tr
+        th(scope='col') title
+        th(scope='col') body
+        th(scope='col') user
+        
+    tbody
+      tr
+        th(scope='row') 
+        td 
+        td 
+        
+      tr
+        th(scope='row') 
+        td 
+        td 
+        
+      tr
+        th(scope='row') 
+        td 
+        td 
+    
