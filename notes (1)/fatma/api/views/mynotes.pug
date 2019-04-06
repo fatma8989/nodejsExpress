@@ -12,12 +12,7 @@ block content
       button#submit.btn.btn-primary(type="submit") send 
 
 
-function f1(x,y,fn){
-  fn(x+y)
-}
-f(1,1,function(result){
-  console.log(result)
-})
+
 
   script.
     $("#submit").click(function(){
@@ -36,9 +31,22 @@ f(1,1,function(result){
       let method = "get"
       let url = "http://localhost:3001/API/notes"
       $.ajax({url:url, method:method}).done((data)=>{
-        console.log(data)
+        //- console.log(data)
           //request call "get"!!
         }) 
+
+    script.
+
+     result.forEach(function(data) {
+
+      let table = '<tr><td>' + mydata.title + '</td><td>' + mydata.body+ '</td><td>' + mydata.user ;
+
+      $('#mydata').append(table);
+
+   });
+ 
+
+  
 
 
   table.table.table-bordered
@@ -48,7 +56,7 @@ f(1,1,function(result){
         th(scope='col') body
         th(scope='col') user
         
-    tbody
+    tbody#mydata
       tr
         th(scope='row') 
         td 
