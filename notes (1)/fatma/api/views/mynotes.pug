@@ -34,13 +34,18 @@ block content
         //- console.log(data)
           //request call "get"!!
 
-      data.forEach(function(mydata) {
 
-      let table = '<tr><td>' + mydata.title + '</td><td>' + mydata.body+ '</td><td>' + mydata.user ;
+     for (let i in data) {
+        let t = data[i]
+        console.log(i)
+        
+
+      let table = '<tr><td>' +t.title + '</td><td>' +t.body+ '</td><td>' + t.user ;
 
       $('#mydata').append(table);
+     
 
-   });
+   }
         }) 
 
     
