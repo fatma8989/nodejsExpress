@@ -33,18 +33,18 @@ block content
       $.ajax({url:url, method:method}).done((data)=>{
         //- console.log(data)
           //request call "get"!!
-        }) 
 
-    script.
-
-     result.forEach(function(data) {
+      data.forEach(function(mydata) {
 
       let table = '<tr><td>' + mydata.title + '</td><td>' + mydata.body+ '</td><td>' + mydata.user ;
 
       $('#mydata').append(table);
 
    });
- 
+        }) 
+
+    
+
 
   
 
@@ -58,17 +58,5 @@ block content
         
     tbody#mydata
       tr
-        th(scope='row') 
-        td 
-        td 
         
-      tr
-        th(scope='row') 
-        td 
-        td 
-        
-      tr
-        th(scope='row') 
-        td 
-        td 
     
