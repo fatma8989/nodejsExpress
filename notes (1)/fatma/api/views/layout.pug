@@ -22,16 +22,16 @@ html
     script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
 body
     
-    //- nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    //-     a.navbar-brand(href='#') #{title}
-    //-     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-    //-         span.navbar-toggler-icon
-    //-     #navbarSupportedContent.collapse.navbar-collapse
-    //-         ul.navbar-nav.mr-auto
-    //-             each key in buttons
-    //-                 li.nav-item.active
-    //-                     a.nav-link(href=key.url)
-    //-                         |  #{key.title}
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='#') #{title}
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+                each key in buttons
+                    li.nav-item.active
+                        a.nav-link(href=key.url)
+                            |  #{key.title}
     block content
 
 

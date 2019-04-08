@@ -10,7 +10,7 @@ block content
       textarea#text.form-control(type="text", name="body", placeholder="body")
     div(style="float: right;")
       button#submit.btn.btn-primary(type="submit") send 
-
+  
 
 
 
@@ -39,16 +39,16 @@ block content
         let t = data[i]
         console.log(i)
         
-
+      if(t.user == "#{user.user}"){
       let table = '<tr><td>' +t.title + '</td><td>' +t.body+ '</td><td>' + t.user ;
 
       $('#mydata').append(table);
+      }
      
 
    }
         }) 
-
-    
+  
 
 
   
