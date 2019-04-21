@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var weatherapiRouter = require('./routes/weatherapi');
-var getweatherapi = require('./routes/getweatherapi');
+var getweatherRouter = require('./routes/getweather');
 
 var app = express();
 
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', weatherapiRouter);
-app.use('/getweatherapi', getweatherapi);
+app.use('/getweather', getweatherRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

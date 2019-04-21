@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var request = require('request')
+var request = require('request');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -13,7 +13,10 @@ router.get('/', function(req, res, next) {
   }
 
 
+
 request(options,(err,req,body)=>{
   res.render('weatherapi' , {title: 'weather', data:body});
 })
 
+module.exports = router;
+})

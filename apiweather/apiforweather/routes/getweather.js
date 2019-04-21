@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
 router.post('/',function(req,res,next){
 
 
-    post.request
+    post.request()
+
+    
+})
+
 
 module.exports = router;
