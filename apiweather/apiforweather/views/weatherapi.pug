@@ -1,0 +1,95 @@
+extends layout
+
+block content
+  h1= title
+  h1= JSON.stringify(data)
+  
+  
+  
+
+  form
+  
+  .row
+    
+    .col-8.col-sm-10.col-lg-10
+      
+      input#searchCity.form-control.input-large(autofocus='', type='search', placeholder='Enter a zipcode, name of city or country', 05='')
+      
+    
+    .col-4.col-sm-2.col-lg-2
+      
+      input#searchButton.btn.btn-large(type='submit', value='Go')
+  
+  //- .container
+  //- .row
+  //- .col-md-4.col-md-offset-4
+  //- .weather
+  //-   .current
+  //-     .info
+  //-       div  
+  //-       .city
+  //-           small
+  //-           small CITY:
+
+  
+  script.
+    $("#submit").click(function(){
+      let d = {
+        city:$("#city").val(),
+        key :"8c67c721916b4be78c08db4b4356eb7a"
+      }
+        let url = "https://samples.openweathermap.org/data/2.5/weather"
+        let method = "get"
+      
+      $.ajax({url:url, method:method,data:d}).done((data)=>{
+        consol.log(data)
+        
+      })
+    })
+    for (let i in data) {
+      let f = data[i]
+      console.log(i)
+      output +=  city + ': ' + f.city+'; ';
+      console.log(output)
+    }
+
+      //- output +=  property + ': ' + obj[property]+'; ';
+      //- }
+      //- console.log(output);
+      //-       })
+
+            
+    //- var data = "#{data.weather[0].id}"
+    //- console.log(data)
+    //- function getweather(data){
+    //-   console.log('weather data received');
+    //-   console.log(data.list[0].weather[0].description); 
+    //-   console.log(data.list[0].weather[0].main);  
+      
+    //- }
+    //- })
+    
+
+      //- for (let i in data) {
+
+      //-   let t = data[i]
+      //-   console.log(data)
+      //-   let table = '<tr><td>' +t.city + '</td><td>' +t.temp ;
+      //-   $('#data').append(table);
+      //- }
+
+     
+  
+
+  //- table.table.table-striped
+  //-   thead
+  //-     tr
+  //-       th(scope='col') city
+  //-       th(scope='col') temp
+      
+        
+  //-   tbody#data
+  //-     tr
+                
+//-
+           
