@@ -12,11 +12,10 @@ router.get('/', function(req, res, next) {
 
   }
 
-
-
 request(options,(err,req,body)=>{
   res.render('weatherapi' , {title: 'weather', data:body});
 })
 
-module.exports = router;
+
 })
+module.exports = router;
