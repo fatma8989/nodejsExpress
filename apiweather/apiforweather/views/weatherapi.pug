@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  h1= JSON.stringify(data)
+  //- h1= JSON.stringify(data)
   
   
   
@@ -34,19 +34,20 @@ block content
   
   script.
     $("#submit").click(function(){
-      let d = {
-        city:$("#city").val(),
-        key :"8c67c721916b4be78c08db4b4356eb7a"
-      }
-        let url = "https://samples.openweathermap.org/data/2.5/weather"
-        let method = "get"
-      
-      $.ajax({url:url, method:method,data:d}).done((data)=>{
-        consol.log(data)
-        
-      })
     })
+  //-     let d = {
+  //-       city:$("#city").val(),
+  //-       key :"8c67c721916b4be78c08db4b4356eb7a"
+  //-     }
+  //-       let url = "https://samples.openweathermap.org/data/2.5/weather"
+  //-       let method = "get"
+      
+  //-     $.ajax({url:url, method:method,data:d}).done((data)=>{
+  //-       consol.log(data)
+        
+  //-     })
+  //-   })
     
-
+    
       
            

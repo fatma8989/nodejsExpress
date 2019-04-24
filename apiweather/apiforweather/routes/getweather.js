@@ -4,23 +4,24 @@ var request = require('request');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  
 });
+
+/* GET users listing. */
 
 router.post('/',function(req,res,next){
 
+  let city = req.body.city // this is the user input
 
- post.request ('https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22',{form:{city:city.val}},(err,reqq,body)=>{
+  let key = "&APPID=8c67c721916b4be78c08db4b4356eb7a"
 
-    console.log(city.val)
-    if (reqq.statusCode == 200){
-        res.render('weatherapi' , {title: 'weather', data:body});
-        
-      }else {
-        res.redirect("/")
-        
-      }
-})
+  let url = "https://api.openweathermap.org/data/2.5/weather?q="
+
+  request.post(url+city+key,(err,reqq,body)=>{
+
+    res.send(body)
+
+  })
 
 })
 module.exports = router;
