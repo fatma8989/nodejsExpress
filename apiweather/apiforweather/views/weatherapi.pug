@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  //- h1= JSON.stringify(data)
+  h1= JSON.stringify(data)
   
   
   
@@ -20,34 +20,37 @@ block content
       
       input#searchButton.btn.btn-large(type='submit', value='Go')
   
-  //- .container
-  //- .row
-  //- .col-md-4.col-md-offset-4
-  //- .weather
-  //-   .current
-  //-     .info
-  //-       div  
-  //-       .city
-  //-           small
-  //-           small CITY:
+ 
+    
+
 
   
   script.
-    $("#submit").click(function(){
-    })
-  //-     let d = {
-  //-       city:$("#city").val(),
-  //-       key :"8c67c721916b4be78c08db4b4356eb7a"
-  //-     }
-  //-       let url = "https://samples.openweathermap.org/data/2.5/weather"
-  //-       let method = "get"
+      $("#submit").click(function(){
+
+
+      let method = "get"
+      let url = "https://api.openweathermap.org/data/2.5/weather?q="
+      $.ajax({url:url, method:method}).done((data)=>{
+
+      let table = '<tr><td>' +t.temp+ '</td><td>'  ;
+
+      $('#data').append(table);
+      }
+     
+  table.table.table-bordered
+      thead
+        tr
+          th(scope='col')
+         
+          
+      tbody#data
+        tr
       
-  //-     $.ajax({url:url, method:method,data:d}).done((data)=>{
-  //-       consol.log(data)
+      
+    
+  
+  
+
+      
         
-  //-     })
-  //-   })
-    
-    
-      
-           
