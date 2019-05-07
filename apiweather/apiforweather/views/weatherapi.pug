@@ -19,6 +19,8 @@ block content
     .col-4.col-sm-2.col-lg-2
       
       input#searchButton.btn.btn-large(type='submit', value='Go')
+      //- input#test(type="result").btn.btn-large(type='result', value='Go')
+      //- div#test
   
  
     
@@ -26,17 +28,22 @@ block content
 
   
   script.
-      $("#submit").click(function(){
+     
+      $("#searchButton").click(function(){
 
 
-      let method = "get"
+      let method = "post"
       let url = "https://api.openweathermap.org/data/2.5/weather?q="
-      $.ajax({url:url, method:method}).done((data)=>{
+      city = $("#searchCity").val()
+      $.ajax({url:url, method:method , data:{city:city}}).done((data)=>{
+        data= JSON.parse(data)
 
-      let table = '<tr><td>' +t.temp+ '</td><td>'  ;
+      let table = '<tr><td>' +data.main.tmep+ '</td><td>';
 
       $('#data').append(table);
-      }
+      //- $('#test').append("fatma");
+    
+      })})
      
   table.table.table-bordered
       thead
