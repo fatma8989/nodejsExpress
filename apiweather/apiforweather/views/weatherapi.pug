@@ -33,12 +33,13 @@ block content
 
 
       let method = "post"
-      let url = "https://api.openweathermap.org/data/2.5/weather?q="
+      let url = "http://localhost:3000/getweather"
       city = $("#searchCity").val()
       $.ajax({url:url, method:method , data:{city:city}}).done((data)=>{
         data= JSON.parse(data)
+        console.log(data)
 
-      let table = '<tr><td>' +data.main.tmep+ '</td><td>';
+      let table = '<tr><td>' +data.main.temp+ '</td><td>';
 
       $('#data').append(table);
       //- $('#test').append("fatma");
